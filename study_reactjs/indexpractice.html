@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="root"></div>
+</body>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" ></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        function App(){
+                const [minute, setMinute]= React.useState(0);
+                const onChange = (event) =>{
+                    setMinute(event.target.value);
+                };
+            return(
+                <div>
+                    <input
+                        id="babo"
+                        placeholder="입력하세유"
+                        value={minute}
+                        type="number"
+                        onChange={onChange}
+                    />
+                </div>
+            );
+        }
+        ReactDOM.render(<App/> ,root);
+    </script>
+</html>
